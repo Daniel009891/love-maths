@@ -70,7 +70,7 @@ function checkAnswer(){
         incrementWrongAnswer();
     }
 
-    runGame(calculatedCorrectAnswer[1]);
+    runGame(calculateCorrectAnswer[1]);
 
 }
 
