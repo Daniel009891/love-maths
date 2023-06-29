@@ -39,6 +39,14 @@ function runGame(gameType) {
         throw `unknown game type: ${gameType}. Aborting!`;
     }
 
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+        
+
+    })
+
 }
 
 /**
@@ -46,6 +54,9 @@ function runGame(gameType) {
  * the returned calculateCorrectAnswer array
  */
 function checkAnswer(){
+
+    document.getElementById("answer-box").value = "";
+    document.getElementById("answer-box").focus();
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
